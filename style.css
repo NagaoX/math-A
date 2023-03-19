@@ -9,12 +9,12 @@
 
 html {
     font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 body {
     background-color: #f8f8f8;
-    padding: 1rem;
+    padding: 2rem;
     justify-content: center;
     align-items: center;
 }
@@ -31,7 +31,7 @@ body {
 }
 
 label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 select,
@@ -43,15 +43,15 @@ input {
 }
 
 select {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     width: 8rem;
 }
 
 input {
     width: 2rem;
     height: 1.5rem;
-    font-size: 1rem;
-    margin: 0.3rem;
+    font-size: 2rem;
+    margin: 0.5rem;
 }
 
 #quantidade {
@@ -62,6 +62,7 @@ input {
     width: 1.2rem;
     height: 1rem;
     font-size: 0.6rem;
+    margin: 0;
 }
 
 button {
@@ -70,7 +71,7 @@ button {
     border: none;
     color: #fff;
     border-radius: 10rem;
-    font-size: 0.7rem;
+    font-size: 1rem;
     text-align: center;
     padding: 10px 20px;
     margin: 5px;
@@ -82,6 +83,9 @@ button:hover {
     opacity: 0.9;
 }
 
+#exercicios-container {
+    font-size: 1.8rem;
+}
 
 #botao-finalizar {
     display: block;
