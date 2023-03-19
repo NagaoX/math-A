@@ -8,6 +8,7 @@ const botaoNovaPagina = document.getElementById('botao-nova-pagina');
 const numeroExerciciosInput = document.getElementById('numero-exercicios');
 const exerciciosContainer = document.getElementById('exercicios-container');
 const mensagemResultado = document.getElementById('mensagem-resultado');
+const inputExercicios = document.querySelector('#numero-exercicios');
 
 // Definir variáveis globais
 let operacao = 'adicao';
@@ -90,6 +91,7 @@ function criarExercicio(operacao, nivel) {
     // Cria o elemento input para a resposta do usuário
     let respostaInput = document.createElement('input');
     respostaInput.type = 'number';
+    respostaInput.inputMode = 'numeric';
     exercicio.appendChild(respostaInput);
 
     // Associa o evento 'keyup' à respostaInput
@@ -123,7 +125,14 @@ function checarRespostas() {
         if (respostaUsuario === respostaCorreta) {
             exercicios[i].classList.add('resposta-correta'); // adiciona a classe resposta-correta ao exercício
             numRespostasCorretas++;
+        } else {
+            exercicios[i].classList.add('resposta-incorreta');
         }
+    }
+
+    // Verifica se o número de respostas corretas é igual ao número total de exercícios
+    if (numRespostasCorretas === exercicios.length) {
+        alert('Parabéns, você acertou todas as respostas!');
     }
 
     // Exibe a mensagem de resultado
@@ -144,7 +153,17 @@ function iniciarExercicios() {
 }
 
 botaoIniciar.addEventListener('click', function () {
-    obterValoresInputs();
+    if (operacaoSelecionada.value == '') {
+        alert('Selecione uma operação');
+        return;
+    } else if (nivelSelecionado.value == '') {
+        alert('Selecione um nível');
+        return;
+    } else if (inputExercicios.value > 100) {
+        alert('O valor máximo permitido para quantidade de exercícios é 100');
+        inputExercicios.focus();
+        return;
+    } else obterValoresInputs();
     exibirExercicios();
 });
 

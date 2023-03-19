@@ -7,36 +7,71 @@
     border: 0;
 }
 
+html {
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 25px;
+}
+
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f8f8f8;
-    padding: 10px;
+    padding: 1rem;
     justify-content: center;
     align-items: center;
 }
 
-label,
+#header {
+    display: flex;
+    align-items: center;
+}
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-size: 0.8rem;
+}
+
 select,
 input {
     background-color: #fff;
     border: 2px solid #d3d3d3;
     color: #333;
     border-radius: 4px;
-    margin: 5px;
-    width: 100px;
+}
+
+select {
+    font-size: 0.8rem;
+    width: 8rem;
 }
 
 input {
-    width: 50px;
-    height: 25px;
+    width: 2rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    margin: 0.3rem;
+}
+
+#quantidade {
+    flex-direction: row;
+}
+
+#numero-exercicios {
+    width: 1.2rem;
+    height: 1rem;
+    font-size: 0.6rem;
 }
 
 button {
-    background-color: #ff5a5f;
+    font-family: 'Helvetica neue';
+    background-color: #f850af;
     border: none;
     color: #fff;
-    border-radius: 4px;
-    font-weight: bold;
+    border-radius: 10rem;
+    font-size: 0.7rem;
+    text-align: center;
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
@@ -44,8 +79,9 @@ button {
 }
 
 button:hover {
-    background-color: #ff7b7f;
+    opacity: 0.9;
 }
+
 
 #botao-finalizar {
     display: block;
@@ -79,12 +115,13 @@ button:hover {
     border-color: #3cb371;
 }
 
+/* Adiciona uma borda vermelha às respostas incorretas */
+.resposta-incorreta input {
+    border-color: #ff5a5f;
+}
+
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-input[type='number'] {
-    -moz-appearance: textfield;
 }
