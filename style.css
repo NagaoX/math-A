@@ -1,0 +1,127 @@
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+}
+
+html {
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 25px;
+}
+
+body {
+    background-color: #f8f8f8;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+}
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-size: 0.8rem;
+}
+
+select,
+input {
+    background-color: #fff;
+    border: 2px solid #d3d3d3;
+    color: #333;
+    border-radius: 4px;
+}
+
+select {
+    font-size: 0.8rem;
+    width: 8rem;
+}
+
+input {
+    width: 2rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    margin: 0.3rem;
+}
+
+#quantidade {
+    flex-direction: row;
+}
+
+#numero-exercicios {
+    width: 1.2rem;
+    height: 1rem;
+    font-size: 0.6rem;
+}
+
+button {
+    font-family: 'Helvetica neue';
+    background-color: #f850af;
+    border: none;
+    color: #fff;
+    border-radius: 10rem;
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+#botao-finalizar {
+    display: block;
+    margin-top: 20px;
+}
+
+/* layout para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    #operacao,
+    #nivel,
+    #numero-exercicios,
+    #botao-iniciar,
+    #botao-finalizar,
+    #botao-proximo,
+    #botao-nova-pagina {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+    #botao-nova-pagina {
+        margin-top: 20px;
+    }
+}
+
+/* Adiciona uma borda verde às respostas corretas */
+.exercicio.resposta-correta input {
+    border-color: #3cb371;
+}
+
+/* Adiciona uma borda vermelha às respostas incorretas */
+.resposta-incorreta input {
+    border-color: #ff5a5f;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
